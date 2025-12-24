@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Assignment Portal | YRA</title>
-    <link rel="stylesheet" href="academy.css">
+    <link rel="stylesheet" href="rules.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -18,20 +18,21 @@
             <div class="nav-links">
                 <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-house-chimney-window"></i></a>
                 <a href="schedule.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
-                <a href="assignment.html" class="nav-item active"><i class="fa-solid fa-pen-to-square"></i></a>
             </div>
+            <div class="nav-id">001</div>
         </nav>
 
         <main class="sanctuary-main">
-            <header class="class-header">
-                <div class="title-block">
-                    <span class="badge">Faculty Submission</span>
+            <header class="sanctuary-header">
+                <div class="welcome-text">
+                    <p class="pre-title">Faculty Submission</p>
                     <h1>Journal & <span>Assignment</span></h1>
                 </div>
             </header>
 
-            <div class="grid-split">
-                <section class="glass-inner">
+            <div class="form-container">
+                
+                <section class="form-card">
                     <h3><i class="fa-solid fa-paper-plane"></i> Direct Submission</h3>
                     
                     <form action="https://formsubmit.co/youngrevivalistacademy01@gmail.com" method="POST" class="submission-form">
@@ -41,19 +42,19 @@
                         <input type="hidden" name="_subject" value="New Academy Assignment Submission!">
 
                         <div class="input-row">
-                            <div class="input-group">
+                            <div class="input-field">
                                 <label>Full Name</label>
-                                <input type="text" name="Student Name" class="custom-input" placeholder="Your Name" required>
+                                <input type="text" name="Student Name" placeholder="Your Name" required>
                             </div>
-                            <div class="input-group">
+                            <div class="input-field">
                                 <label>Matric Number</label>
-                                <input type="text" name="Matric Number" class="custom-input" placeholder="YRA/2025/..." required>
+                                <input type="text" name="Matric Number" placeholder="YRA/2025/..." required>
                             </div>
                         </div>
 
-                        <div class="input-group">
+                        <div class="input-field">
                             <label>Module Reviewing</label>
-                            <select name="Module" class="custom-select">
+                            <select name="Module">
                                 <option>Module 1-3: The Gospel </option>
                                 <option>Module 4-6: The Secret Place & The Holy Spirit</option>
                                 <option>Module 7-8: Renewing The Mind & Understanding Purpose</option>
@@ -63,24 +64,25 @@
                             </select>
                         </div>
 
-                        <div class="input-group">
+                        <div class="input-field">
                             <label>Review & Assignment Content</label>
-                            <textarea name="Message" class="reflection-box" placeholder="Write your review or paste your assignment here..." required></textarea>
+                            <textarea name="Message" rows="8" placeholder="Write your review or paste your assignment here..." required></textarea>
                         </div>
 
-                        <button type="submit" class="submit-btn">Submit to Faculty</button>
+                        <button type="submit" class="submit-action-btn">Submit to Faculty</button>
                     </form>
                 </section>
 
-                <section class="glass-inner">
-                    <h3><i class="fa-solid fa-circle-check"></i> Submission Status</h3>
-                    <p><small>Submitting to: <strong>youngrevivalistacademy01@gmail.com</strong></small></p>
-                    <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0;">
-                    <ul class="history-list">
-                        <li class="history-item"><i class="fa-solid fa-bolt" style="color: var(--primary);"></i> <small>Instant delivery to faculty</small></li>
-                        <li class="history-item"><i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> <small>Secure end-to-end encryption</small></li>
+                <section class="status-card">
+                    <h3><i class="fa-solid fa-circle-check"></i> Portal Status</h3>
+                    <p><small>Sending to: <strong>YRA Faculty</strong></small></p>
+                    <div class="status-line"></div>
+                    <ul class="info-list">
+                        <li><i class="fa-solid fa-bolt"></i> Instant Delivery</li>
+                        <li><i class="fa-solid fa-shield-halved"></i> Secure Submission</li>
                     </ul>
                 </section>
+                
             </div>
         </main>
     </div>
