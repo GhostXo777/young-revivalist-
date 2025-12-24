@@ -1,0 +1,161 @@
+:root {
+    --primary-orange: #FF7B54;
+    --bg-light: #F8F9FA;
+    --white: #FFFFFF;
+    --text-dark: #1A1A1A;
+    --text-muted: #666666;
+    --error-red: #C53030;
+    --warning-gold: #F59E0B;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header */
+.rules-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+.rules-header i {
+    font-size: 2.5rem;
+    color: var(--primary-orange);
+    margin-bottom: 10px;
+}
+
+.rules-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Cards & Sections */
+.about-card, .disqualify-section, .quiz-notice, .rules-container {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.about-card { border-left: 5px solid var(--primary-orange); }
+
+.small-muted { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Disqualification */
+.disqualify-section {
+    background: #FFF5F5;
+    border: 1px dashed #FF7878;
+}
+
+.disqualify-section h2 {
+    color: var(--error-red);
+    font-size: 1.1rem;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rule-item-alt {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.rule-item-alt i { color: var(--error-red); margin-top: 4px; }
+
+/* Quiz Notice */
+.quiz-notice {
+    background: #FFFBEB;
+    border: 2px solid var(--warning-gold);
+}
+
+.notice-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #92400E;
+    margin-bottom: 15px;
+}
+
+.notice-header h2 { font-size: 1.1rem; margin: 0; font-weight: 800; }
+
+.deadline-text { color: #B45309; font-weight: 600; }
+
+.action-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.action-box h4 { margin: 0 0 10px 0; color: #92400E; font-size: 0.9rem; }
+
+.action-box ul { list-style: none; padding: 0; margin: 0; }
+
+.action-box li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.note-footer { font-size: 0.8rem; border-top: 1px solid #fce6a9; padding-top: 10px; }
+
+/* Rules List */
+.section-title { font-size: 1rem; text-transform: uppercase; text-align: center; margin-bottom: 25px; }
+
+.rule-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.rule-number {
+    background: #FFF5F2;
+    color: var(--primary-orange);
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.rule-text { font-size: 0.9rem; font-weight: 600; }
+
+.footer-note {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    body { padding: 15px; }
+    .rules-header h1 { font-size: 1.7rem; }
+    .about-card, .disqualify-section, .quiz-notice, .rules-container {
+        padding: 20px;
+        border-radius: 18px;
+    }
+}
