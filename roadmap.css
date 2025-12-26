@@ -140,7 +140,169 @@ body {
     margin-left: 10px;
 }
 
+
+:root {
+    --primary: #1a1a1a;
+    --accent: #FF7B54;
+    --bg-soft: #f8f9fa;
+    --text-muted: #6c757d;
+}
+
+body.roadmap-body {
+    background-color: var(--bg-soft);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.week-badge {
+    background: var(--primary);
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.year-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+    color: var(--accent);
+    font-weight: 800;
+    margin: 0;
+}
+
+.roadmap-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 100;
+    margin: 5px 0;
+}
+
+.roadmap-header h1 strong {
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* The Roadmap Connector Line */
+.roadmap-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.roadmap-container::before {
+    content: '';
+    position: absolute;
+    left: 42px; /* Centers under the date box */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0,0,0,0.05);
+    z-index: 0;
+}
+
+.module-card {
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.module-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.date-box {
+    background: var(--primary);
+    color: white;
+    min-width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-box .day {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.date-box .month {
+    font-size: 0.6rem;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.content-box h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.content-box p {
+    margin: 2px 0 0 0;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.enter-btn {
+    background: var(--bg-soft);
+    color: var(--primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.roadmap-footer {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 800;
+}
+
+
+
 .enter-btn:active {
     transform: scale(0.9);
     background: #e66a46;
+
 }
